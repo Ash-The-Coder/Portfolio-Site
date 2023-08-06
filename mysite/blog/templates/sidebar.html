@@ -1,0 +1,38 @@
+{% block sidebar %}
+
+<style>
+        .card{
+            box-shadow: 0 16px 48px #E3E7EB;
+        }
+
+</style>
+
+<!-- Sidebar Widgets Column -->
+<div class="col-md-4 float-right ">
+            <div class="col mt-3">
+            <div class="card my-4">
+
+                    <h5 class="card-header">Categories</h5>
+                <div class="card-body">
+                    <p class="card-text"> To see the posts with respect to category click below</p>
+                    <ul class="list-unstyled">
+                        <li><a href="{% url 'categories_list' %}" class="btn btn-outline-primary">All Categories</a></li>
+                        <!-- Add more category links here -->
+                    </ul>
+                </div>
+            </div>
+
+<div class="card my-4">
+        <h5 class="card-header">About Me</h5>
+    <div class="card-body">
+        <p class="card-text"> I'm a Versatile Django Full Stack Developer and Data Scientist actively seeking new opportunities.
+            Click the button below to explore my qualifications further and discuss potential collaborations.
+            Let's make a difference together.</p>
+        <a href="{% url 'home' %}"
+           class="btn btn-danger">Know more!</a>
+    </div>
+</div>
+</div>
+</div>
+
+{% endblock sidebar %}
