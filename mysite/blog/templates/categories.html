@@ -1,0 +1,35 @@
+<!-- categories.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 mt-5">
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th><h2 style="font-family: Arial, sans-serif; font-size: 24px; text-align: center;">
+                                Category List</h2></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <ol style="font-size: 18px;"> <!-- Adjust the font size as needed -->
+                                    {% for category in categories %}
+                                        <li>
+                                            <a href="{% url 'category_posts' category.id %}" class="category-link">{{ category.name }}</a>
+                                        </li>
+                                    {% endfor %}
+                                </ol>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
