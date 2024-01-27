@@ -4,7 +4,7 @@ from django.urls import path, include
 from django.contrib.auth import views as auth_views
 
 urlpatterns = [
-    path('', TemplateView.as_view(template_name='homepage.html'), name='home'),
+    path('',views.PostList.as_view(), name='post_list'),
     path('blog/', views.PostList.as_view(), name='post_list'),
     path('blog/<slug:slug>/', views.PostDetail.as_view(), name='post_detail'),
     path('create/', views.create_blog_post, name='create-blog-post'),
